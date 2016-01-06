@@ -1,0 +1,120 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 14px;
+	background: rgb(211,211,211);
+}
+
+.background-image {
+	background-image: url('./GrayMarble.png');
+	background-repeat: repeat;
+	-webkit-opacity: 0.4;
+	-moz-opacity: 0.4;
+	opacity: 0.4;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -100;
+	pointer-events: none;
+}
+
+section.header,
+section.body,
+section.footer {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	background: transparent !important;
+}
+
+section.footer {
+	position: absolute;
+	bottom: 0;
+}
+
+.wrap {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.top-header  {
+	border: 8px ridge #CCC;
+	text-align: center;
+}
+
+.marquee {
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	font-style: italic;
+	font-size: 1.5em;
+	box-sizing: border-box;
+	animation: marquee 25s linear infinite;
+}
+
+.marquee-content {
+	width: 480px;
+	margin: 0;
+}
+
+@keyframes marquee {
+	0% { text-indent: 100vw; }
+	100% { text-indent: -100vw;}
+}
+
+.sidebar {
+	float: left;
+	border: 8px ridge #CCC;
+	margin: 0;
+	width: 25%;
+	min-width: 150px;
+}
+
+#nav {
+    padding: 0 30px;
+    min-width: 150px;
+}
+
+a.nav-link:hover,
+a.nav-link:active,
+a.nav-link:focus,
+a.nav-link.active {
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.content {
+	float: right;
+	border: 8px ridge #CCC;
+	margin: 0;
+	padding: 8px;
+	width: calc(75% - 36px);
+}
+
+@media (max-width: 480px) {
+	.sidebar, .content {
+		float: none;
+		width: inherit;
+	}
+
+	#nav {
+		padding: 0;
+		text-align: center;
+	}
+
+	#nav li {
+		display: inline-block;
+	}
+
+	a.nav-link:hover,
+	a.nav-link:active,
+	a.nav-link:focus,
+	a.nav-link.active {
+		font-size: 1em;
+	}
+}
