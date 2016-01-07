@@ -96,6 +96,17 @@ a.nav-link.active {
 	width: calc(75% - 36px);
 }
 
+.player {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+.player audio {
+	width: 48px;
+	display: inline-block;
+}
+
 @media (max-width: 480px) {
 	.sidebar, .content {
 		float: none;
