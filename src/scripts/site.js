@@ -1,5 +1,7 @@
 var checkHash = function() {
-	var hash = window.location.hash == '#index' ? '#home' : window.location.hash;
+	console.log(window.location.hash, typeof window.location.hash);
+	var homeHashes = ['', '#', '#home', '#index'],
+		hash = homeHashes.indexOf(window.location.hash) != -1 ? '#home' : window.location.hash;
 
 	if (!!hash) {
 		var page = '../src/content/' + hash.replace('#', '') + '.html';
