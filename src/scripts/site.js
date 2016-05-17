@@ -5,9 +5,11 @@ var checkHash = function() {
 
 	if (!!hash) {
 		var page = '../src/content/' + hash.replace('#', '') + '.html';
+		$('.content').empty().addClass('loading');
+
 
 		$.get(page, function(data) {
-			$('.content').html(data);
+			$('.content').html(data).removeClass('loading');
 			$('.nav-link').removeClass('active');
 			$(hash).addClass('active');
 		});		

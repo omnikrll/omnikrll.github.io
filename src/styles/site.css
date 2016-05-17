@@ -98,6 +98,18 @@ a.nav-link.active {
 	width: calc(75% - 36px);
 }
 
+.content.loading {
+	height: 14em;
+	background-image: url('./loading.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.content.loading * {
+	display: none;
+}
+
 .content .content-item {
 	margin: 12px 0;
 	border-bottom: 1px solid black;
@@ -109,6 +121,16 @@ a.nav-link.active {
 
 .content .content-item div {
 	margin: 4px 0;
+}
+
+.img-container {
+	width: 100%;
+	height: auto;
+}
+
+.img-container img {
+	width: 100%;
+	height: auto;
 }
 
 .player {
