@@ -136,6 +136,12 @@ a.nav-link.active {
 	height: auto;
 }
 
+.youtube-embed {
+	width: 100%;
+	height: auto;
+	min-height: 315px;
+}
+
 .player {
 	position: fixed;
 	bottom: 0;
@@ -167,5 +173,9 @@ a.nav-link.active {
 	a.nav-link:focus,
 	a.nav-link.active {
 		font-size: 1em;
+	}
+
+	.youtube-embed {
+		min-height: 180px;
 	}
 }
