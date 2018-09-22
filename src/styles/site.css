@@ -130,7 +130,8 @@ a.nav-link.active {
 	height: auto;
 }
 
-.img-container img {
+.img-container img,
+.img-container video {
 	width: 100%;
 	height: auto;
 }
