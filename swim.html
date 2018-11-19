@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>swim.mp3</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			background: black;
+			font-family: sans-serif;
+		}
+
+		#click {
+			display: inline-block;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			color: white;
+		}
+
+		#img {
+			width: 100vw;
+			height: 100vh;
+			background-image: url('src/img/water-at-night.gif');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			display: none;
+		}
+
+		#audio {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<a id="click" href="#">i'd give away all the love i need</a>
+	<div id="img"></div>
+	<audio id="audio" preload="true" src="src/audio/swim.mp3"></audio>
+	<script>
+
+		var a = document.getElementById('click'),
+			i = document.getElementById('img'),
+			_s = document.getElementById('audio');
+
+		a.addEventListener('click', function() {
+			a.style.display = 'none';
+			i.style.display = 'block';
+			_s.play();
+		});
+
+		_s.addEventListener('timeupdate', function() {
+			var d = this.currentTime * 100;
+
+			i.style.filter = 'hue-rotate(' + d + 'deg)';
+		});
+
+	</script>
+</body>
+</html>
