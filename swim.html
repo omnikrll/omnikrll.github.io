@@ -44,7 +44,9 @@
 			i = document.getElementById('img'),
 			_s = document.getElementById('audio');
 
-		a.addEventListener('click', function() {
+		a.addEventListener('click', function(e) {
+			e.preventDefault();
+
 			a.style.display = 'none';
 			i.style.display = 'block';
 			_s.play();
