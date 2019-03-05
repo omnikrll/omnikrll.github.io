@@ -61,6 +61,12 @@
 			i.style.filter = 'hue-rotate(' + d + 'deg)';
 		});
 
+		_s.addEventListener('ended', function() {
+			i.style.display = 'none';
+			a.innerText = 'replay';
+			a.style.display = 'block';
+		});
+
 	</script>
 </body>
 </html>
