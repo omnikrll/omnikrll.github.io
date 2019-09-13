@@ -17,9 +17,10 @@ var checkHash = function() {
 }
 
 var midiFile = '../src/audio/no-scrubs.mid',
-	isPlaying = true;
+	isPlaying = false;
 
 $('#transport').click(function(event) {
+
 	event.preventDefault();
 
 	if (isPlaying) {
@@ -36,6 +37,6 @@ $('#transport').click(function(event) {
 
 $(function() {
 	checkHash();
-	MIDIjs.play(midiFile);
+	// MIDIjs.play(midiFile);
 	$(window).on('hashchange', checkHash);
 });
