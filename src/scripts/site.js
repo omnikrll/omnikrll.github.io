@@ -16,7 +16,26 @@ var checkHash = function() {
 	}
 }
 
+var midiFile = '../src/audio/no-scrubs.mid',
+	isPlaying = true;
+
+$('#transport').click(function(event) {
+	event.preventDefault();
+
+	if (isPlaying) {
+		MIDIjs.stop();
+		isPlaying = false;
+	} else {
+		MIDIjs.play(midiFile);
+		isPlaying = true;
+	}
+
+	var icon = isPlaying ? 'icon-stop' : 'icon-play2';
+	$(event.target).attr('class', icon);
+});
+
 $(function() {
 	checkHash();
+	MIDIjs.play(midiFile);
 	$(window).on('hashchange', checkHash);
 });
