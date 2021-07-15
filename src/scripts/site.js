@@ -37,6 +37,6 @@ $('#transport').click(function(event) {
 
 $(function() {
 	checkHash();
-	// MIDIjs.play(midiFile);
+	$('#transport').click();
 	$(window).on('hashchange', checkHash);
 });
