@@ -9,6 +9,19 @@
 			font-family: sans-serif;
 		}
 
+		h1 {
+			position: fixed;
+			bottom: 0;
+			width: 100vw;
+			text-align: center;
+			color: transparent;
+			text-shadow: 1px 1px 1px rgba(63,63,63,0.2);
+			-webkit-text-stroke-color: rgba(0,0,0,0.2);
+			-webkit-text-stroke-width: 1px;
+			letter-spacing: 0.25em;
+			z-index: 2;
+		}
+
 		#click {
 			display: inline-block;
 			position: fixed;
@@ -30,6 +43,7 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			display: none;
+			opacity: 0.8;
 		}
 
 		#audio {
@@ -40,10 +54,11 @@
 <body>
 	<a id="click" href="#">i'd give away all the love i need</a>
 	<div id="img"></div>
-	<audio id="audio" preload="true" src="src/audio/swim.mp3"></audio>
+	<h1 style="">i'd give away all the love i need</h1>
+	<audio id="audio" preload="true" autoplay loop src="src/audio/swim.mp3"></audio>
 	<script>
 
-		var a = document.getElementById('click'),
+		const a = document.getElementById('click'),
 			i = document.getElementById('img'),
 			_s = document.getElementById('audio');
 
